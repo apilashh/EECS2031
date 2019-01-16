@@ -19,10 +19,12 @@ int main()
     scanf("%d", &num);
     for (int i = 0; i < num; ++i)
     {
+        printf("");
         printf("Enter two float numbers separated by ##: ");
         scanf("%f##%f", &x, &y);
         float su = sum(x, y);
         printf("%f + %f = %f\n", x, y, su);
+        printf("");
     }
     return 0;
 }

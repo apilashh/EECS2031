@@ -17,7 +17,7 @@ int main()
     printf("Enter two float numbers separated by ##: ");
     scanf("%f##%f", &x, &y);
     float su = sum(x, y);
-    printf("%f + %f = %f\n", x, y, su);
+    printf("%f + %f = %f", x, y, su);
 
     return 0;
 }
