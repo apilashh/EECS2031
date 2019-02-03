@@ -1,3 +1,10 @@
+/***************************************
+* EECS2031 – Lab3 *
+* Author: Thiruchelva, Apilash *
+* Email: t.apilash@hotmail.com *
+* EECS_num: apilashh *
+* York Student #: 215700131 *
+****************************************/
 #include <stdio.h>
 #include <string.h>
 
