@@ -1,3 +1,11 @@
+/***************************************
+* CSE2031Z – Lab4 *
+* Filename: lab4macroSys.c *
+* Author: Thiruchelva, Apilash *
+* Email:  t.apilash@hotmail.com*
+* eecs_username: apilashh *
+* York num: 215700131
+****************************************/
 #include <stdio.h>
 #include <stdlib.h>
 
