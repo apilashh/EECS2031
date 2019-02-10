@@ -31,16 +31,17 @@ int main(int argc, char *argv[])
         ceil_wage = ceilf(new_wage);
         floor_wage = floorf(new_wage);
 
-        for(int i = 0; i < sizeof(name); i++){
+        for (int i = 0; i < sizeof(name); i++)
+        {
             new_name[i] = name[i];
-    }
+        }
         new_name[0] = toupper(new_name[0]);
 
         sprintf(resu, "%s-%d-%.3f-[%.0f, %.0f]", new_name, new_age, new_wage, floor_wage, ceil_wage);
         strcpy(resu2, resu);
         sprintf(resu3, "%s", resu2);
         /* use scanf to read again */
-        printf("%s\n%s\n%s\n",resu,resu2,resu3);
+        printf("%s\n%s\n%s\n", resu, resu2, resu3);
 
         printf("Enter name, age and wage (xxx to quit): ");
         scanf("%s %s %s", name, age, wage);

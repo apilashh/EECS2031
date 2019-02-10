@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <math.h> /* for pow() */
 #include <string.h>
-#define SIZE 10 
+#define SIZE 10
 int my_atoi(char c[]); /* function declaration */
 int isQuit(char cp[]);
 int main()
@@ -46,15 +46,15 @@ int my_atoi(char c[])
 {
     double num = 0;
 
-    for(int i = 0; i < strlen(c); i++){
+    for (int i = 0; i < strlen(c); i++)
+    {
         int letter = c[strlen(c) - 1 - i] - '0';
 
-        num = num + letter*pow(10,i);
+        num = num + letter * pow(10, i);
         //printf("%d: %d, %d, %f\n", i, num, letter, letter*pow(10,i));1
     }
 
     return num;
-
 }
 int isQuit(char c[])
 {
@@ -74,5 +74,3 @@ int isQuit(char c[])
     }
     return true;
 }
-
-

@@ -38,7 +38,7 @@ int main()
 int countDays(int y, int m, int d)
 {
     int num_days = 0;
-    for (int i = m-1; i > 0; i--)
+    for (int i = m - 1; i > 0; i--)
     {
         if (i == 2)
         {
@@ -47,11 +47,12 @@ int countDays(int y, int m, int d)
             else
                 num_days += 28;
         }
-        else if ( i % 2 == 0)
+        else if (i % 2 == 0)
             num_days += 30;
-        else if(m == 1){
-
-        }else
+        else if (m == 1)
+        {
+        }
+        else
             num_days += 31;
     }
     num_days += d;
@@ -62,7 +63,7 @@ int isQuit(char c[])
 {
     int true;
     char quit[] = {'q', 'u', 'i', 't'};
-    for (int i = 0; i < strlen(c)-1; i++)
+    for (int i = 0; i < strlen(c) - 1; i++)
     {
         if (c[i] == quit[i])
             true = 1;

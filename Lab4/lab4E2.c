@@ -1,12 +1,11 @@
 /***************************************
 * CSE2031Z – Lab4 *
-* Filename: lab4E.c *
+* Filename: lab4E2.c *
 * Author: Thiruchelva, Apilash *
 * Email:  t.apilash@hotmail.com*
 * eecs_username: apilashh *
 * York num: 215700131
 ****************************************/
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -18,16 +17,20 @@
 int isQuit(char c[]);
 int main(int argc, char *argv[])
 {
-    char inputs_table[ROWS][COLUMNS];
-    int age;
-    int count = 0;
-    char name[SIZE], new_name[SIZE];
-    float wage;
-    int current_row = 0;
-    printf("Enter name age and wage: ");
-    scanf("%s %d %f", name, &age, &wage);
+    char input_table[ROWS][COLUMNS];
 
-    while (isQuit(name) == 0)
+    int current_row = 0;
+
+    int age;
+    float wage;
+    char name[SIZE], new_name[SIZE];
+    int count = 0;
+
+    printf("Enter name age and wage: ");
+    fgets(input_table[current_row], 30, stdin); // add a /n
+    input_table[current_row][strlen(input_table[current_row])-1] = '\0'; //remove \n
+    sscanf(input_table[current_row], "%s %d %f", name, &age, &wage);
+    while (isQuit(name)== 0)
     {
         for (int i = 0; i < sizeof(name); i++)
         {
@@ -36,22 +39,22 @@ int main(int argc, char *argv[])
         int new_age = age + 10;
         double new_wage = wage * 1.5;
 
-        sprintf(inputs_table[current_row], "%s %d %.2f", name, age, wage);
-        sprintf(inputs_table[current_row + 1], "%s %d %.2f", new_name, new_age, new_wage);
-
+        sprintf(input_table[current_row + 1], "%s %d %.2f", new_name, new_age, new_wage);
         current_row+=2;
-        /* read again  */
+
         printf("Enter name age and wage: ");
-        scanf("%s %d %f", name, &age, &wage);
-        /* now display the input_table row by row */
+        fgets(input_table[current_row], 30, stdin);
+        input_table[current_row][strlen(input_table[current_row])-1] = '\0';
+        sscanf(input_table[current_row], "%s %d %f", name, &age, &wage);
     }
+
     printf("\nRecords generated in %s on %s %s\n", __FILE__, __DATE__, __TIME__);
-    for (int j = 0; j < current_row; j++)
-    {
-        printf("%s\n", inputs_table[j]);
+    for(int i = 0; i < current_row; i++){
+        printf("%s\n", input_table[i]);
     }
     return 0;
 }
+
 int isQuit(char c[])
 {
     int true;
