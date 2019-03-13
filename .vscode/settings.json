@@ -1,4 +1,8 @@
 {
     "git.ignoreLimitWarning": true,
-    "python.pythonPath": "C:\\Users\\tapil\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe"
+    "python.pythonPath": "C:\\Users\\tapil\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
+    "files.associations": {
+        "stdlib.h": "c"
+    },
+    "C_Cpp.default.cStandard": "c89"
 }
